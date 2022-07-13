@@ -38,14 +38,19 @@ body {
 .wrapper {
 }
 .header {
-    background-color: rgba(26, 95, 224, 0.649);
-
+    /* background-color: rgba(26, 95, 224, 0.649);  */
 }
 .header::before {
- 
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 5;
+    background-color: rgba(26, 95, 224, 0.649);
 }
-.header__container { 
-   
+.header__container {    
 }
 .header__body {
     display: flex;
@@ -55,17 +60,19 @@ body {
     padding: 0px 10px 0px 0px;
 }
 .header__logo {
-    
+    z-index: 5;
 }
 .header__logo img {    
     border-radius: 50%;
     max-width: 60px;
+   
 }
 .header__burger {
     /* display: none; */
 }
 .header__menu {
-    /* display: none; */
+    z-index: 4;
+   
              
 }
 
@@ -80,9 +87,9 @@ body {
         content: '';
         position: absolute;
         width: 100%;
-        height: 5px;
+        height: 6px;
         background-color: #fff;
-        border-radius: 2px;
+        border-radius: 3px;
         transition: all 0.3s ease 0s;  
     }
     .header__burger::before {
@@ -92,16 +99,16 @@ body {
         position: absolute;
         top: 45%;
         width: 100%;
-        height: 5px;
+        height: 6px;
         background-color: #fff;
-        border-radius: 2px;
+        border-radius: 3px;
         transition: all 0.3s ease 0s;  
     }
     .header__burger {
         position: relative;
         width: 50px;
         height: 45px;
-        z-index: 2;
+        z-index: 5;
     }
     .header__burger.active:before {
         transform: rotate(45deg);
@@ -121,10 +128,9 @@ body {
         position: fixed;
         top: 0;
         left: 0;
-        border: 3px solid;
         height: 100%;
         width: 100%;
-        background-color: rgba(16, 174, 188, 0.837);  
+        background-color: rgb(91, 79, 113);  
         display: block;
         text-align: end;
         padding: 0px 10px 0px 0px;
@@ -144,8 +150,17 @@ body {
     color: aliceblue;
     font-size: 20px;
     text-transform: uppercase;
+    z-index: 5;
 }
 .main {
 }
 .main__container {
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: rgba(26, 95, 224, 0.649);
 }
